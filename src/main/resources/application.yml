@@ -1,0 +1,27 @@
+---
+swagger:
+  api:
+    title: EQSTeams
+    contact.info: Team
+    licence.url: #
+    description: These API's are Developed to build a solution for Openhack
+    groupName: eqs-group
+    version: 1.0
+  terms.of.service.url: #
+  enabled: true
+  
+server:
+  port: 8080
+  servlet: 
+    context-path:
+app:
+  jwtSecret: SldUU3VwZXJTZWNyZXRLZXk=
+  jwtExpirationInMs: 1200000
+  
+api:
+   aws:
+     dynamodb:
+#     endpoint: http://192.168.137.128:4569/
+      endpoint:
+      accesskey:
+      secretkey:
