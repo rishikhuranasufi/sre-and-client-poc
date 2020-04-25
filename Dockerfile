@@ -1,9 +1,7 @@
-FROM centos:7
+FROM java:8
+WORKDIR /
+ADD target/EQS-training-sample-app-0.1.0.jar app.jar
 
-VOLUME /tmp
-ADD target/EQS-training-sample-app-0.1.0.jar
-RUN touch /app.jar
+ENV PORT 8080
 
-ENV PORT 8090
-
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
